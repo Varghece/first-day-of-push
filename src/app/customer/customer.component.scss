@@ -1,0 +1,268 @@
+@import "src/styles.scss";
+.container1{
+  width: 98%;
+  margin-left: 30px;
+  // class boxbrief for customer details in brief template
+  .boxbrief{
+    @include displays;
+    width: 96%;
+    height: 125px;
+    background-color: rgb(233, 247, 253);
+    border-radius: 25px;
+    border-bottom: 1px solid $primarycolor;
+    margin-bottom: 2px;
+    padding: 7px;
+    .boxbrief1{
+      background-color: rgb(221, 218, 177);
+      width: 33%;
+      height: 70%;
+      border-radius: 50px;
+      img{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        position: relative;
+        top:-8px;
+        z-index: 1;
+      }
+      .boxbrief1a{
+        background-color: $secondarycolor;
+        width:100%;
+        height:100%;
+        border-radius: 50px;
+        position: relative;
+        left: 0px;
+        top:-94px;
+        z-index: 0;
+        border-bottom: 1px solid $primarycolor;
+        .names1{
+          margin: 0px;
+          padding: 10px 10px 0px 0px;
+           margin-left: 100px;
+           color: darkblue;
+        }
+        .names2{
+          margin: 0px;
+          padding-top: 5px;
+           margin-left: 100px;
+        }
+        .names3{
+          margin-right: 30px;
+          padding: 0px;
+          float: right;
+          text-decoration: none;
+          color: blue;
+        }
+      }
+    }
+    .boxbrief2a{
+      width: 63%;
+      height: 80%;
+      display: flex;
+      .boxbrief2a1{
+        width: 33%;
+        height: 100%;
+        table{
+          margin-top: 5%;
+          padding: 0px;
+          width: 100%;
+          height: 70%;
+          text-align:start;
+          tr{
+            @include alignment;
+            height: 25%;
+          }
+          td{
+            @include alignment;
+            padding-left:10%;
+          }
+        }
+        .bordr{
+          border-right: 2px solid $primarycolor;
+        }
+      }
+    }
+  }
+  // class boxexp1 for the details template
+  .boxexp1{
+    width: 97%;
+    height: 447px;
+    overflow: auto;
+    // border: 1px solid black;
+    h2,h3{
+      color: darkblue;
+    }
+    h2{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    h3{
+      width: 500px;
+      height: 30px;
+      border-left: 3px solid red;
+      padding-top: 5px;
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+    .boxexp{
+      padding: 25px;
+      width: 99%;
+      min-height: 200px;
+      background-color: $secondarycolor;
+      border: 1px solid $primarycolor;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      .boxexpa{
+        width:100%;
+        @include displays;
+        // border: 1px solid $primarycolor;
+      }
+      table{
+        width:70%;
+        // border: 1px solid black;
+         progress{
+           width: 80%;
+           height: 13px;
+          }
+        tr{
+          height: 60px;
+          font-weight: bold;
+          // border: 1px solid black;
+          td{
+            // border: 1px solid black;
+            input{
+             @include  selectsame;
+            }
+            select{
+             @include  selectsame;
+            }
+            textarea{
+             @include  selectsame;
+            }
+           }
+           .td1{
+             width: 40%;
+           }
+           .td2{
+            width:25%;
+           }
+           .td3{
+             width: 20%;
+            font-weight: normal;
+           }
+           .tdp{
+            width: 20%;
+             font-size: medium;
+             font-weight: normal;
+             color: blue;
+           }
+        }
+      }
+      .imgbox{
+        align-self: start;
+        width: 30%;
+        height: 200px;
+        background-color: white;
+        @include displays;
+        flex-direction: column;
+        // border: 1px solid black;
+        img{
+          background-color: $primarycolor;
+          width:90% ;
+          height: 140px;
+          // border: 1px solid black;
+          border-radius: 25px;
+          float: right;
+        }
+        .p{
+          width:90% ;
+          height: 35px;
+          background-color: rgb(186, 200, 247);
+          border-left: 3px solid darkblue;
+          p{
+            @include alignment;
+            width:80%;
+            margin-top: 8px;
+            margin-left: 20px;
+            font-size: large;
+            color: darkblue;
+          }
+          i{
+            float: right;
+            color: blue;
+          }
+        }
+      }
+      .imgbox1{
+        width: 60%;
+        height: 200px;
+        background-color: white;
+        @include displays;
+        flex-direction: column;
+        margin-left: 40%;
+        // border: 1px solid black;
+        img{
+          background-color: $primarycolor;
+          width:90% ;
+          height: 140px;
+          // border: 1px solid black;
+          border-radius: 25px;
+          float: right;
+        }
+        .p{
+          width:90% ;
+          height: 35px;
+          background-color: rgb(186, 200, 247);
+          border-left: 3px solid darkblue;
+          p{
+            @include alignment;
+            width: 80%;
+            margin-top: 8px;
+            margin-left: 20px;
+            font-size: large;
+            color: darkblue;
+          }
+          .pi-eye{
+            margin-top: 0;
+            float: right;
+            color: blue;
+          }
+        }
+      }
+      .table1{
+        width:100%;
+        // border: 1px solid black;
+        i{
+          margin: 10px;
+        }
+        .pi-pencil{
+          color: darkblue;
+        }
+        .pi-trash{
+          color: red;
+        }
+        button{
+          margin-right: 5px;
+          font-size: medium;
+          width: 80%;
+         height: 40px;
+         border-radius: 25px;
+         border: 1px solid darkblue;
+         background-color: white;
+        }
+        }
+    }
+  }
+  .boxexp1::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
