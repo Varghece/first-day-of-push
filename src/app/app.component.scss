@@ -50,12 +50,24 @@
       i{
         margin: 5px;
       }
+      p{
+        width: 15px;
+        height: 15px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        font-size: smaller;
+        position: relative;
+        top: -40px;
+        left: 23px;
+
+      }
     }
     .person{
       display:inline-flex;
       align-items: center;
       .p1{
-        background-color: greenyellow;
+        background-color: rgb(233, 247, 253);
         border-radius: 50%;
         @include samewh1;
         text-align: center;

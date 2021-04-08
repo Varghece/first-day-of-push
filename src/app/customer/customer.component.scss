@@ -249,9 +249,33 @@
          border-radius: 25px;
          border: 1px solid darkblue;
          background-color: white;
+         outline: none;
         }
         }
     }
+    .button1{
+      background-color: rgb(7, 180, 7);
+      color: white;
+      width: 130px;
+      height: 35px;
+      border-radius: 15px;
+      margin: 10px;
+      border-style:none ;
+      font-size: medium;
+      outline: none;
+    }
+    .button2{
+      background-color: red;
+      color: white;
+      width: 130px;
+      height: 35px;
+      border-radius: 15px;
+      margin: 10px;
+      border-style:none ;
+      font-size: medium;
+      outline: none;
+    }
+
   }
   .boxexp1::-webkit-scrollbar {
     display: none;
