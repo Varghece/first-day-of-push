@@ -2,63 +2,62 @@
 .container{
   margin: 40px 40px 0px 40px;
   padding: 0;
-  background-color: $secondarycolor;
+  background-color: $white;
   min-height: 690px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
-  box-shadow: 1px 0.9px 80px $primarycolor;
-  font-family: 'Poppins', sans-serif;
-  font-size: small;
-  font-weight: 400;
-  // font-family: 'Roboto', sans-serif;
+  box-shadow: 1px 0.9px 80px $lightgray;
+  font-family: $fontfamily;
+  font-size: $smallfont;
+  font-weight: $mediumfont;
 }
 .header{
   @include displays;
- justify-content: space-between;
+  justify-content: space-between;
   max-width: 100%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  border-bottom: 1px solid $primarycolor;
+  border-bottom: 1px solid $lightgray;
   .logo{
     width: 40%;
     margin-bottom: 5px;
     h1{
-      @include alignment;
+      @include sizezero;
       margin-left: 10px;
-      color: red;
+      color: $red;
     }
     span{
-      color: darkblue;
+      color: $darkblue;
     }
     p{
-      @include alignment;
+      @include sizezero;
       margin-left: 10px;
     }
   }
-  .hmenu{
-    @include displays;
-    width: 40%;
-    .s1{
+   .header-nav{
+     @include displays;
+     width: 40%;
+     .header-nav-branch-select{
       padding: 10px 30px 10px 30px;
       border-radius: 20px;
-      // font-weight: bold;
+      font-weight: $thickestfont ;
       outline: none;
-      border: 1px solid $primarycolor;
+      border: 1px solid $lightgray;
     }
-    .bell{
-      background-color: $secondarycolor;
+    .header-nav-bell{
+      background-color: $white;
       border-radius: 50%;
       @include samewh1;
       text-align: center;
-      box-shadow: 1px 0.9px 30px $primarycolor;
+      box-shadow: 1px 0.9px 30px $lightgray;
       i{
         margin: 5px;
       }
       p{
         width: 15px;
         height: 15px;
-        background-color: red;
-        color: white;
+        background-color: $red;
+        color: $white;
         border-radius: 50%;
         font-size: smaller;
         position: relative;
@@ -67,11 +66,11 @@
 
       }
     }
-    .person{
+    .header-nav-customer{
       display:inline-flex;
       align-items: center;
-      .p1{
-        background-color: rgb(233, 247, 253);
+      .header-nav-customer-firstletter{
+        background-color: $skyblue;
         border-radius: 50%;
         @include samewh1;
         text-align: center;
@@ -79,98 +78,99 @@
           margin: 3px;
         }
       }
-      .s2{
+      .header-nav-customer-select{
         padding: 10px 30px 10px 10px;
         border-radius: 20px;
         border-style: none;
-        // font-weight: bold;
+        font-weight: $thickestfont;
         outline: none;
       }
     }
   }
 }
-.vmenu{
+
+.body-container{
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-auto-rows: minmax(630px, auto);
-  .colm1{
+  .body-icon-navbar{
     grid-column: 1 ;
     grid-row: 1 ;
-    border-right: 1px solid $primarycolor;
-    .colm1a{
+    border-right: 1px solid $lightgray;
+    .body-icon-navbar-section1{
       width: 60%;
       margin-left: 20%;
       margin-top: 20px;
       padding-bottom: 20px;
       min-height: 360px;
-      border-bottom: 2px solid $primarycolor;
+      border-bottom: 2px solid $lightgray;
       @include displays;
       flex-direction: column;
       a{
-      color: gray;
+      color: $gray;
       }
       a:hover{
       color: black;
       }
     }
-    .colm1b{
+    .body-icon-navbar-section2{
       padding-top: 20px;
       min-height: 150px;
       @include displays;
       flex-direction: column;
       a{
-      color: gray;
+      color: $gray;
        }
        a:hover{
        color: black;
        }
     }
   }
-  .colm2{
+  .body-ul-navbar{
     grid-column: 2 / 6 ;
     grid-row: 1;
-    .ul1{
-      @include alignment;
+    .body-ul-navbar-list{
+      @include sizezero;
       list-style-type: none;
-      font-size: small;
-      font-weight: 500;
+     font-size: $smallfont;
+      font-weight: $thickfont;
       height:630px;
       overflow: scroll;
       li{
         cursor: pointer;
         padding: 10px 20px 10px 25px;
         i{
-          font-weight:bolder;
-          font-size: medium;
-          color: rgb(109, 207, 11);
+          font-weight: $thickestfont;
+          font-size: $mediumsize;
+          color: $green;
           float: right;
         }
-        .ul2{
-          @include alignment;
+        .body-ul-navbar-list-gray{
+          @include sizezero;
           list-style-type: none;
-          font-size: small;
-          font-weight: 500;
-          color: gray;
+          font-size: $smallfont;
+          font-weight: $thickfont;
+          color: $gray;
           li{
               cursor: pointer;
               padding: 10px 40px 10px 0px;
              i{
-              font-weight:bolder;
-              font-size: medium;
-              color: gray;
+              font-weight: $thickestfont;
+              font-size: $mediumsize;
+              color: $gray;
               float: left;
               margin-right: 5px;
               }
               a{
                 text-decoration: none;
-                color: gray;
+                color: $gray;
               }
           }
         }
       }
-      .listy{
-        background-color: rgb(216, 216, 250);
-        border-left: 3px solid rgb(241, 6, 6);
+      .body-ul-navbar-list-bluebackground{
+        background-color: $lightblue;
+        border-left: 3px solid $red;
         margin-bottom: 2px;
       }
     }
@@ -178,14 +178,15 @@
         display: none;
       }
   }
-  .colm3{
+
+  .body-horizontal-navbar{
     grid-column: 6 / 21;
     grid-row: 1 ;
-    color: gray;
+    color: $gray;
     ul{
      list-style-type: none;
-     font-size: small;
-     font-weight: 400;
+    font-size: $smallfont;
+     font-weight: $mediumfont;
      padding-left: 20px;
      li{
       display: inline;
@@ -195,9 +196,10 @@
     }
   }
 }
-.footer1{
+
+.footer{
   width: 100%;
-  background-color: $secondarycolor;
+  background-color: $white;
   height: 16px;
 }
 

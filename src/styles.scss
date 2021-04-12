@@ -1,8 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
-$primarycolor : rgb(214, 214, 214);
-$secondarycolor : white;
+$gray : gray;
+$lightgray : rgb(214, 214, 214);
+$white : white;
+$darkblue : darkblue;
+$blue : blue;
+$lightblue : rgb(186, 200, 247);
+$red : red;
+$green : rgb(33, 194, 27);
+$skyblue : rgb(233, 247, 253);
+$fontfamily : 'Poppins', sans-serif;
+$lightfont : 300;
+$mediumfont : 400;
+$thickfont : 500;
+$thickestfont : 700;
+$mediumsize : medium;
+$smallfont : small;
 
-@mixin alignment {
+@mixin button-common{
+      color: $white;
+      width: 130px;
+      height: 35px;
+      border-radius: 15px;
+      margin: 10px;
+      border-style:none ;
+      font-size: $mediumsize;
+      outline: none;
+}
+
+@mixin sizezero{
   margin: 0px;
   padding: 0px;
 }
@@ -16,13 +41,13 @@ $secondarycolor : white;
   height: 30px;
 }
 body{
-  background-color:$secondarycolor;
-  @include alignment;
+  background-color:$white;
+  @include sizezero;
 }
 @mixin selectsame {
   width: 100%;
   height: 45px;
   border-radius: 25px;
-  border: 1px solid $primarycolor ;
+  border: 1px solid $lightgray ;
   outline: none;
 }
